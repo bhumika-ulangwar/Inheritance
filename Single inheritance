@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    string brand = "Mercedes";
+
+    void color() {
+        cout << "Black!\n";
+    }
+};
+
+class Car : public Vehicle {   
+public:
+    string model = "Gwagon";
+};
+
+int main() {
+    Car myCar;  // object of derived class
+
+    cout << "Brand: " << myCar.brand << endl;   
+    cout << "Model: " << myCar.model << endl;  
+    cout << "Color: ";
+    myCar.color();  
+    return 0;
+}
+
+//output
+Brand: Mercedes
+Model: Gwagon
+Color: Black!
+

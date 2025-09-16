@@ -1,0 +1,48 @@
+//Multiple inheritance
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    string brand = "Mercedes";
+
+    void color() {
+        cout << "Black!\n";
+    }
+};
+
+class Engine{
+    public:
+    int horsepower = 450;
+    
+    void enginetype(){
+        cout<<"Electric motor";
+    }
+};
+
+class Car : public Vehicle,public Engine {  
+public:
+    string model = "Gwagon";
+};
+
+int main() {
+    Car myCar; 
+
+    cout << "Brand: " << myCar.brand << endl;   
+    cout << "Model: " << myCar.model << endl;  
+    cout << "Color: ";
+    myCar.color(); 
+    
+    cout<<"Horsepower: "<<myCar.horsepower<< endl;
+    cout<<"Engine type : ";
+    myCar.enginetype();
+
+    return 0;
+}
+
+//output
+Brand: Mercedes
+Model: Gwagon
+Color: Black!
+Horsepower: 450
+Engine type : Electric motor

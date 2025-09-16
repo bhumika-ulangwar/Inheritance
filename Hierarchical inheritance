@@ -1,0 +1,49 @@
+// hierarchical inheritance 
+#include <iostream>
+using namespace std;
+
+class Book {
+public:
+    void getTitle() {
+        cout << "Title:It Ends with Us" << endl;
+    }
+};
+
+class Author : public Book {
+public:
+    void getAuthor() {
+        cout << "Author: Jenny han" << endl;
+    }
+};
+
+class Publisher : public Book {
+public:
+    void getPublisher() {
+        cout << "Publisher: Addison-Wesley" << endl;
+    }
+};
+
+int main() {
+    Author a;
+    Publisher p;
+
+    cout << " Book & Author " << endl;
+    a.getTitle();
+    a.getAuthor();
+
+    cout << "\n Book & Publisher " << endl;
+    p.getTitle();
+    p.getPublisher();
+
+    return 0;
+}
+
+//output
+ Book & Author 
+Title:It Ends with Us
+Author: Jenny han
+
+ Book & Publisher 
+Title:It Ends with Us
+Publisher: Addison-Wesley
+

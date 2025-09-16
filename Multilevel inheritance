@@ -1,0 +1,38 @@
+//multilevel inheritance
+#include <iostream>
+using namespace std;
+
+class Person {
+public:
+    void getName() {
+        cout << "Name: Bhumika" << endl;
+    }
+};
+
+class Student : public Person {
+public:
+    void getPrnNo() {
+        cout << "Prn Number:  24070123030" << endl;
+    }
+};
+
+class Exam : public Student {
+public:
+    void getMarks() {
+        cout << "Marks: 90" << endl;
+    }
+};
+
+int main() {
+    Exam e1;
+    e1.getName();     
+    e1.getPrnNo();   
+    e1.getMarks();    
+
+    return 0;
+}
+
+//output
+Name: Bhumika
+Prn Number:  24070123030
+Marks: 90
